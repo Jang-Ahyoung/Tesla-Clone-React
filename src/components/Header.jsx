@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
@@ -14,9 +14,9 @@ function Header() {
             <a onClick={() => { handleScroll(0) }}><img src="/images/logo.svg" alt="logo"></img></a>
             <Menu>
                 <a onClick={() => { handleScroll(0) }}>model s</a>
-                <a onClick={() => { handleScroll(930) }}>model 3</a>
-                <a onClick={() => { handleScroll(1860) }}>model x</a>
-                <a onClick={() => { handleScroll(2788) }}>model y</a>
+                <a onClick={() => { handleScroll(940) }}>model 3</a>
+                <a onClick={() => { handleScroll(1876) }}>model x</a>
+                <a onClick={() => { handleScroll(2814) }}>model y</a>
             </Menu>
             <RightMenu>
                 <a href="#">Shop</a>
@@ -26,9 +26,9 @@ function Header() {
             <BugerMenu show={burgerStatus}>
                 <CloseWrapper><CustomClose onClick={() => setBurgerStatus(!burgerStatus)}></CustomClose></CloseWrapper>
                 <li><a onClick={() => { handleScroll(0) }}>model s</a></li>
-                <li><a onClick={() => { handleScroll(930) }}>model 3</a></li>
-                <li><a onClick={() => { handleScroll(1860) }}>model x</a></li>
-                <li><a onClick={() => { handleScroll(2300) }}>model y</a></li>
+                <li><a onClick={() => { handleScroll(940) }}>model 3</a></li>
+                <li><a onClick={() => { handleScroll(1876) }}>model x</a></li>
+                <li><a onClick={() => { handleScroll(2814) }}>model y</a></li>
                 <li><a href="#">Existiong Inventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
                 <li><a href="#">Trade-in</a></li>
@@ -43,7 +43,6 @@ function Header() {
 }
 
 export default Header;
-
 const Container = styled.div`
     min-height:60px;
     position:fixed;
@@ -66,7 +65,6 @@ const Menu = styled.div`
         flex-wrap:nowrap;
         cursor:pointer;
     }
-
     @media(max-width:798px){
         display:none;
     }
@@ -81,11 +79,9 @@ const RightMenu = styled.div`
         flex-wrap:nowrap;
     }
 `
-
 const CustomMenu = styled(MenuIcon)`
     cursor:pointer;
 `
-
 const BugerMenu = styled.div`
     position:fixed;
     top:0;
