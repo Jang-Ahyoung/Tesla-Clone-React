@@ -2,23 +2,21 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-import { selectCars } from '../features/car/carSlice';
-import { useSelector } from 'react-redux';
 
 function Header() {
     const [burgerStatus, setBurgerStatus] = useState(false);
-    const cars = useSelector(selectCars);
     const handleScroll = (x) => {
-        console.log(x)
-        window.scrollTo(0, x);
+        burgerStatus && setBurgerStatus(!burgerStatus);
+        window.scrollTo({ top: x, left: 0, behavior: 'smooth' });
     }
     return (
         <Container>
-            <a><img src="/images/logo.svg" alt="logo"></img></a>
+            <a onClick={() => { handleScroll(0) }}><img src="/images/logo.svg" alt="logo"></img></a>
             <Menu>
-                {cars && cars.map((car, index) => (
-                    <a key={index} onClick={handleScroll(1000)}>{car}</a>
-                ))}
+                <a onClick={() => { handleScroll(0) }}>model s</a>
+                <a onClick={() => { handleScroll(930) }}>model 3</a>
+                <a onClick={() => { handleScroll(1860) }}>model x</a>
+                <a onClick={() => { handleScroll(2788) }}>model y</a>
             </Menu>
             <RightMenu>
                 <a href="#">Shop</a>
@@ -27,9 +25,10 @@ function Header() {
             </RightMenu>
             <BugerMenu show={burgerStatus}>
                 <CloseWrapper><CustomClose onClick={() => setBurgerStatus(!burgerStatus)}></CustomClose></CloseWrapper>
-                {cars && cars.map((car, index) => (
-                    <li key={index}><a href="#">{car}</a></li>
-                ))}
+                <li><a onClick={() => { handleScroll(0) }}>model s</a></li>
+                <li><a onClick={() => { handleScroll(930) }}>model 3</a></li>
+                <li><a onClick={() => { handleScroll(1860) }}>model x</a></li>
+                <li><a onClick={() => { handleScroll(2300) }}>model y</a></li>
                 <li><a href="#">Existiong Inventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
                 <li><a href="#">Trade-in</a></li>
@@ -37,7 +36,6 @@ function Header() {
                 <li><a href="#">Roadaster</a></li>
                 <li><a href="#">Semi</a></li>
                 <li><a href="#">Charging</a></li>
-                <li><a href="#">Roadaster</a></li>
                 <li><a href="#">Roadaster</a></li>
             </BugerMenu>
         </Container>
@@ -66,6 +64,7 @@ const Menu = styled.div`
         text-transform:uppercase;
         padding: 0 10px;
         flex-wrap:nowrap;
+        cursor:pointer;
     }
 
     @media(max-width:798px){
