@@ -102,6 +102,7 @@ const BugerMenu = styled.div`
     }
     a{
         font-weight:600;
+        cursor:pointer;
     }
 `
 const CloseWrapper = styled.div`
