@@ -1,44 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+<h1 align="center">🛫 Tesla 홈페이지 클론 프로젝트 🛫</h1>
 
-## Available Scripts
+<!-- ![issue bedge](https://img.shields.io/badge/yarn-v%201.22.10-orange) -->
 
-In the project directory, you can run:
+> React, Html 과 styled components를 이용해 제작한 테슬라 사이트  <br />
 
-### `yarn start`
+### 🎅 developer - [장아영](https://github.com/Jang-Ahyoung)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 💙 Go to site - [https://tesla-ang.netlify.app/](https://tesla-ang.netlify.app/)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+![image](https://user-images.githubusercontent.com/71692593/123207621-a3cc8680-d4f8-11eb-9e7f-380aeb22e519.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://user-images.githubusercontent.com/71692593/123207975-3bca7000-d4f9-11eb-9b3f-e2adc23c90b4.png)
 
-### `yarn build`
+## 기술 스택
+- React
+- styled components
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
