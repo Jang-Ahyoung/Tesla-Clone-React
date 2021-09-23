@@ -6,6 +6,7 @@ function Home() {
     return (
         <Container>
             <Section
+                id="ModelS"
                 title="Model S"
                 description="Order Online for Touchless Delivery"
                 backgroundImg="model-s.jpg"
@@ -13,6 +14,7 @@ function Home() {
                 rightBtnText="Existing Inventory"
             />
             <Section
+                id="Model3"
                 title="Model 3"
                 description="Order Online for Touchless Delivery"
                 backgroundImg="model-3.jpg"
@@ -20,6 +22,7 @@ function Home() {
                 rightBtnText="Existing Inventory"
             />
             <Section
+                id="ModelX"
                 title="Model X"
                 description="Order Online for Touchless Delivery"
                 backgroundImg="model-x.jpg"
@@ -27,6 +30,7 @@ function Home() {
                 rightBtnText="Existing Inventory"
             />
             <Section
+                id="ModelY"
                 title="Model Y"
                 description="Order Online for Touchless Delivery"
                 backgroundImg="model-y.jpg"
@@ -60,5 +64,9 @@ function Home() {
 export default Home;
 
 const Container = styled.div`
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
     height:100vh;
+    scroll-behavior:smooth;
 `
