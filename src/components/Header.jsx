@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 
 function Header() {
     const [burgerStatus, setBurgerStatus] = useState(false);
-    const handleScroll = (x) => {
+    const handleScroll = () => {
         burgerStatus && setBurgerStatus(!burgerStatus);
-        window.scrollTo({ top: x, left: 0, behavior: 'smooth' });
     }
     return (
         <Container>
-            <a onClick={() => { handleScroll(0) }}><img src="/images/logo.svg" alt="logo"></img></a>
+            <a href="#ModelS">
+                <img src="/images/logo.svg" alt="logo"></img>
+            </a>
             <Menu>
-                <a onClick={() => { handleScroll(0) }}>model s</a>
-                <a onClick={() => { handleScroll(940) }}>model 3</a>
-                <a onClick={() => { handleScroll(1876) }}>model x</a>
-                <a onClick={() => { handleScroll(2814) }}>model y</a>
+                <a href="#ModelS" onClick={handleScroll}>model s</a>
+                <a href="#Model3" onClick={handleScroll}>model 3</a>
+                <a href="#ModelX" onClick={handleScroll}>model x</a>
+                <a href="#ModelY" onClick={handleScroll}>model y</a>
             </Menu>
             <RightMenu>
                 <a href="#">Shop</a>
@@ -25,10 +26,10 @@ function Header() {
             </RightMenu>
             <BugerMenu show={burgerStatus}>
                 <CloseWrapper><CustomClose onClick={() => setBurgerStatus(!burgerStatus)}></CustomClose></CloseWrapper>
-                <li><a onClick={() => { handleScroll(0) }}>model s</a></li>
-                <li><a onClick={() => { handleScroll(940) }}>model 3</a></li>
-                <li><a onClick={() => { handleScroll(1876) }}>model x</a></li>
-                <li><a onClick={() => { handleScroll(2814) }}>model y</a></li>
+                <li><a href="#ModelS" onClick={handleScroll}>model s</a></li>
+                <li><a href="#Model3" onClick={handleScroll}>model 3</a></li>
+                <li><a href="#ModelX" onClick={handleScroll}>model x</a></li>
+                <li><a href="#ModelY" onClick={handleScroll}>model y</a></li>
                 <li><a href="#">Existiong Inventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
                 <li><a href="#">Trade-in</a></li>
@@ -49,7 +50,7 @@ const Container = styled.div`
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding: 0 20px;
+    padding: 0 25px;
     width:100%;
     z-index:100;
 `
